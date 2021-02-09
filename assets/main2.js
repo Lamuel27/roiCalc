@@ -17,6 +17,8 @@ function calculateRoi() {
     var var5= document.getElementById('costPaybackResult');
     var var6= document.getElementById('irrResult');
     var var7= document.getElementById('valueAddedResult');
+    var var8= document.getElementById('irrlength');
+    var var9= document.getElementById('accountLength');
 
     // Calculate
     var newDepositAdoption= '';
@@ -32,7 +34,8 @@ function calculateRoi() {
     var costPaybackResult= ((costResult / incRevenueResult) * 12);
     var irrResult= incRevenueResult / costResult * 100;
     var valueAddedResult= customerRetention.value * customerValue.value;
-
+    var irrlength= 'IRR over ' + customerRetention.value + ' year customer relationship';
+    var accountLength= 'Value added per account over ' + customerRetention.value + ' year relationship';
     // Apply results
 
     var1.innerHTML= newDepositAdoption.toFixed(2) * 100;
@@ -42,6 +45,8 @@ function calculateRoi() {
     var5.innerHTML= costPaybackResult.toFixed(1);
     var6.innerHTML= irrResult.toFixed();
     var7.innerHTML= valueAddedResult.toLocaleString('en-US', {style:'currency', currency:'USD'});
+    var8.innerHTML= irrlength;
+    var9.innerHTML= accountLength;
 
     $(var1).append('%');
     $(var5).append(' months');
