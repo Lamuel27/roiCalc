@@ -38,14 +38,17 @@ function calculateRoi() {
     // Apply results
 
     var1.innerHTML= newDepositAdoption.toFixed(2) * 100;
-    var2.innerHTML= incRevenueResult.toFixed();
-    var3.innerHTML= costResult.toFixed();
-    var4.innerHTML= profitIncreaseResult.toFixed();
+    var2.innerHTML= incRevenueResult.toLocaleString('en-US', {style:'currency', currency:'USD'});
+    var3.innerHTML= costResult.toLocaleString('en-US', {style:'currency', currency:'USD'});
+    var4.innerHTML= profitIncreaseResult.toLocaleString('en-US', {style:'currency', currency:'USD'});
     var5.innerHTML= costPaybackResult.toFixed(2);
     var6.innerHTML= irrResult.toFixed();
-    var7.innerHTML= valueAddedResult.toFixed();
+    var7.innerHTML= valueAddedResult.toLocaleString('en-US', {style:'currency', currency:'USD'});
 
-    
+    $(var1).append('%');
+    $(var5).append(' months');
+    $(var6).append('%');
+ 
 
     return false;
 }
