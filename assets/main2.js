@@ -19,15 +19,13 @@ function calculateRoi() {
     var var7= document.getElementById('valueAddedResult');
 
     // Calculate
-    // var newDepositAdoption= function () {
-    //     if (ddaPercentage.value > 0.6) {
-    //         newDepositAdoption = (ddaPercentage.value * 1.3)
-    //     }
-    //     else {
-    //         newDepositAdoption = (ddaPercentage.value + 0.2)
-    //     }
-    // };
-    var newDepositAdoption= (ddaPercentage.value * 1.33333333) / 100;
+    var newDepositAdoption= '';
+        if (ddaPercentage.value/100 > 0.6) {
+            newDepositAdoption = (ddaPercentage.value/100 * 1.33333333);
+        }
+        else {
+            newDepositAdoption = (ddaPercentage.value/100 + 0.2);
+        }
     var incRevenueResult= (((newDepositAdoption - (ddaPercentage.value / 100)) * newDDA.value) * customerValue.value);
     var costResult= ((newDepositAdoption) * costPerSwitch.value * newDDA.value);
     var profitIncreaseResult= (incRevenueResult - costResult);
