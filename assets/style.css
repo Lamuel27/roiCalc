@@ -1,6 +1,6 @@
 *:focus{outline:0}input:focus,input:active{border:0;outline:0}body,div,ul,ol,li,h1,h2,h3,h4,form,input,p,pre{margin:0;padding:0;border:0}body{background-color:#FFF}img{border:0}a{text-decoration:none;cursor:pointer}li{list-style:none}h1,h2,h3,h4,p{color:#333;font-family:Arial,Helvetica,sans-serif;font-weight:normal}
 
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans&display=swap);
 
 body, h1, h2, h3, h4, p, span, a, button{
     font-family:'Ubuntu', sans-serif ;
@@ -23,12 +23,12 @@ h3{
 }
 
 .introTxtMainContainer{
-    background: #FF5100  url('http://landing.fromdoppler.com/Doppler/roicalculator/img/guardBg.png') repeat-x;
+    background: #FF5100;
     width: 100%;
 }
 
 .introTxtContainer{
-    height: 345px;
+    height: 210px;
     width: 940px;
     margin:0 auto;
 }
@@ -180,7 +180,7 @@ button{
 }
 
 button:hover{
-    background-color: #112E51 ;
+    background-color: #FF5100 ;
     cursor:pointer;
 }
 
@@ -468,13 +468,13 @@ button:hover{
       color: #FFFFFF;
       font-weight: 300;
       letter-spacing: -2px;
-      background-color: #00B966;
+      background-color: #FF5100;
       border-radius: 60px;
       border: 0;
     }
     
     button:hover {
-      background-color: #02B061;
+      background-color: #FF5100;
       cursor: pointer;
     }
     
@@ -580,7 +580,7 @@ button:hover{
     }
     
     .roiAnalyticFinalValue {
-      color: #00B866;
+      color: #FF5100;
       line-height: 1.0;
       font-size: 41px;
       margin-top: -23px;
@@ -590,7 +590,7 @@ button:hover{
     
     .roiPercentSign {
       font-weight: 300;
-      color: #00B866;
+      color: #FF5100;
       font-size: 24px;
       margin-top: -12px;
       float: right;
@@ -619,7 +619,7 @@ button:hover{
     }
     
     .preFooterSubtitle a {
-      color: #00B866;
+      color: #FF5100;
     }
     
     h4 {
@@ -688,7 +688,7 @@ hr{
 }
 
 .roiAnalyticFinalValue{
-    color:#00B866;
+    color:#FF5100;
     line-height:1.0;
     font-size:41px;
     margin-top:-23px;
@@ -698,7 +698,7 @@ hr{
 
 .roiPercentSign{
     font-weight:300;
-    color:#00B866;
+    color:#FF5100;
     font-size:24px;
     margin-top:-12px;
     float:right;
@@ -729,7 +729,7 @@ hr{
 }
 
 .preFooterSubtitle a{
-    color:#00B866;
+    color: #FF5100;
 }
 
 h4{
