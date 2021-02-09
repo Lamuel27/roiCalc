@@ -21,7 +21,7 @@ function calculateRoi() {
     // Calculate
     var newDepositAdoption= '';
         if (ddaPercentage.value/100 > 0.6) {
-            newDepositAdoption = (ddaPercentage.value/100 * 1.33333333);
+            newDepositAdoption = (ddaPercentage.value/100 * 1.3);
         }
         else {
             newDepositAdoption = (ddaPercentage.value/100 + 0.2);
@@ -30,7 +30,7 @@ function calculateRoi() {
     var costResult= ((newDepositAdoption) * costPerSwitch.value * newDDA.value);
     var profitIncreaseResult= (incRevenueResult - costResult);
     var costPaybackResult= ((costResult / incRevenueResult) * 12);
-    var irrResult= incRevenueResult / 1000;
+    var irrResult= incRevenueResult / costResult * 100;
     var valueAddedResult= customerRetention.value * customerValue.value;
 
     // Apply results
