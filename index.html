@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ClickSWITCH ROI</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.19.1/moment.min.js"></script>
+</head>
+<body>
+<section class="introTxtMainContainer">
+    <div class="introTxtContainer">
+        <h1 class="introTitle">Calculate your ROI with ClickSWITCH</h1>
+        <!-- <h3 class="introSubtitle">How successful are your Email Marketing Campaigns? With our helpful calculator you’ll find out what’s the Return On Investment of each Campaign. </h3>
+        <h3 class="introSubtitle" style="font-weight:700; padding-top:30px;">See how profitable your sendings really are!</h3> -->
+    </div>
+</section>
+
+<section class="roiAnalizerMainContainer">
+    <img src="assets/images/logo-footer.png">
+    <div class="roiAnalizerContainer">
+        <h2 class="roiTitle">Pre-ClickSWITCH Results</h2>
+
+        <form id="roiForm" class="roiForm"  action="">
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Number of new DDA's Per Year</p>
+                    <!-- <p class="roiFormSubtitle">The total number of contacts you’ve sent your Campaign to.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="newDDA" name="newDDA" class="formInput" type="text" placeholder="Enter DDA's opened per year" maxlength="10" />
+                    <p class="rowUnit">:)</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Direct Deposit Adoption</p>
+                    <!-- <p class="roiFormSubtitle">The estimated cost of the production and execution of your Campaign.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="ddaPercentage" name="ddaPercentage" class="formInput" type="text" placeholder="Enter Direct Depost Adoption Rate" maxlength="10"/>
+                    <p class="rowUnit">%</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Annual Value of Direct Deposit Customer</p>
+                    <!-- <p class="roiFormSubtitle">Percentage of Subscribers that opened your Email.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="customerValue" name="customerValue" class="formInput" type="text" placeholder="Enter Annual Value of Customer" maxlength="5" />
+                    <p class="rowUnit">$</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Customer Retention (Years)</p>
+                    <!-- <p class="roiFormSubtitle">Percentage of Subscribers who converted (buy, register, download, etc).</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="customerRetention" name="customerRetention" class="formInput"   type="text" placeholder="Enter Customer Retention" maxlength="5" />
+                    <p class="rowUnit">:)</p>
+                </div>
+            </div>
+
+            <!-- <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Value per Conversion</p>
+                    <p class="roiFormSubtitle">The total cost spent by each Subscriber that has for example purchased your product.</p>
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="averageBuyerPurchase" name="averageBuyerPurchase" class="formInput"   type="text" placeholder="Type  the value per conversion " maxlength="10" />
+                    <p class="rowUnit">$</p>
+                </div>
+            </div> -->
+        </form>
+        
+    </div>
+</section>
+
+<!-- Add ClickSWITCH -->
+<section class="roiAnalizerMainContainer">
+    <div class="roiAnalizerContainer">
+        <h2 class="roiTitle">Add ClickSWITCH</h2>
+        <form id="roiForm" class="roiForm"  action="">
+            
+                    <div class="rowContainer">
+                        <div class="firstColumnOfRowContainer">
+                            <p class="roiFormTitle">New Direct Deposit Adoption</p>
+                            <!-- <p class="roiFormSubtitle">The total number of contacts you’ve sent your Campaign to.</p> -->
+                        </div>
+                        <div class="secondColumnOfRowContainer">
+                            <p class="roiAnalyticValue" id="newDepositAdoption">0</p>
+                        </div>
+                    </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Cost Per Switch</p>
+                    <!-- <p class="roiFormSubtitle">The estimated cost of the production and execution of your Campaign.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <input id="costPerSwitch" name="costPerSwitch" class="formInput"   type="text" placeholder="Enter cost per switch" maxlength="5" />
+                    <p class="rowUnit">$</p>
+                </div>
+            </div>
+
+        </form>
+        <button id="ctaCalculate" class="roibutton">Calculate ROI</button>
+    </div>
+</section>
+<!-- Add ClickSWITCH -->
+<!-- Results -->
+<section class="roiAnalizerMainContainer">
+    <div class="roiAnalizerContainer">
+        <h2 class="roiTitle">Results</h2>
+        <form id="roiForm" class="roiForm"  action="">
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Incremental Revenue in First Year</p>
+                    <!-- <p class="roiFormSubtitle">The total number of contacts you’ve sent your Campaign to.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="incRevenueResult">0</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">ClickSWITCH Cost</p>
+                    <!-- <p class="roiFormSubtitle">The estimated cost of the production and execution of your Campaign.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="costResult">0</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">First Year Profit Increase</p>
+                    <!-- <p class="roiFormSubtitle">Percentage of Subscribers that opened your Email.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="profitIncreaseResult">0</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Switch Cost Payback in Months</p>
+                    <!-- <p class="roiFormSubtitle">Percentage of Subscribers who converted (buy, register, download, etc).</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="costPaybackResult">0</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">IRR over 8 year customer relationship</p>
+                    <!-- <p class="roiFormSubtitle">The total cost spent by each Subscriber that has for example purchased your product.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="irrResult">0</p>
+                </div>
+            </div>
+
+            <div class="rowContainer">
+                <div class="firstColumnOfRowContainer">
+                    <p class="roiFormTitle">Value added per account over 8 year relationship</p>
+                    <!-- <p class="roiFormSubtitle">The total cost spent by each Subscriber that has for example purchased your product.</p> -->
+                </div>
+                <div class="secondColumnOfRowContainer">
+                    <p class="roiAnalyticValue" id="valueAddedResult">0</p>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Results -->
+<!-- <section class="roiResultsMainContainer" id="roiResultsMainContainer">
+    <div class="roiResultsTriangleWrapper">
+        <div class="roiResultsTriangleContainer">
+            <img src="http://landing.fromdoppler.com/Doppler/roicalculator/img/triangle.png"  class="triangleImg" />
+        </div>
+    </div>
+    <div class="roiResultsContainer">
+        <h2 class="roiResultsTitle">Results</h2>
+        <div class="roiResultsFirstColumn">
+            <div class="roiResultsChart" >
+                <canvas id="roiChart" width="460" height="632"></canvas>
+            </div>
+        </div>
+        <div class="roiResultsSecondColumn">
+            <div class="roiResultsAnalyticContainer">
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Cost per Contact</p>
+                    <p class="roiFormSubtitle">How much did it cost to reach each<br/>Subscriber.</p>
+                    <p class="roiAnalyticValue" id="contactingCostResult">0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Number of Openings</p>
+                    <p class="roiFormSubtitle">Total amount of Subscribers who opened<br/>your Campaign.</p>
+                    <p class="roiAnalyticValue" id="openRateResult">0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Number of Conversions</p>
+                    <p class="roiFormSubtitle">Total amount of Subscribers who<br/>converted.</p>
+                    <p class="roiAnalyticValue" id="convertionRateResult" >0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Revenue</p>
+                    <p class="roiFormSubtitle">Total amount of money<br/>obtained.</p>
+                    <p class="roiAnalyticValue" id="totalEarningResult" >0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Profit</p>
+                    <p class="roiFormSubtitle">Total amount of money remaining<br/>after all costs have been deducted.</p>
+                    <p class="roiAnalyticValue" id="netEarningResult">0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Cost per open Email</p>
+                    <p class="roiFormSubtitle">How much did it cost each opening of<br/>your Campaigns.</p>
+                    <p class="roiAnalyticValue" id="costPerOpenEmailResult">0</p>
+                </div>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">Cost per Conversion</p>
+                    <p class="roiFormSubtitle">How much did it cost each<br/>conversion.</p>
+                    <p class="roiAnalyticValue" id="costPerConvertionResult">0</p>
+                </div>
+                <hr/>
+                <div class="analyticRowContainer">
+                    <p class="roiFormTitle">ROI</p>
+                    <p class="roiFormSubtitle">Return On Investment percentage. </p>
+                    <p class="roiPercentSign">%</p>
+                    <p class="roiAnalyticValue roiAnalyticFinalValue" id="roiResult" >0,0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/main.js"></script>
+</section> -->
+
+<section class="preFooterMainContainer">
+    <div class="preFooterContainer">
+        <h4 class="preFooterTitle">Need more information about how to calculate your ClickSWITCH’s ROI?</h4>
+        <p class="preFooterSubtitle">Visit <a href="https://www.clickswitch.com" class="preFooterSubtitleLink" target="_blank">ClickSWITCH</a> for help from our sales team! <a href="mailto:support@clickswitch.com" class="preFooterSubtitleLink" target="_blank">Support Team</a>. We are here to help you!</p>
+    </div>
+</section>
+
+<script src="assets/main2.js"></script>
+
+</body>
+
+</html>

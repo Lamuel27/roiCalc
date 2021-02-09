@@ -1,0 +1,741 @@
+*:focus{outline:0}input:focus,input:active{border:0;outline:0}body,div,ul,ol,li,h1,h2,h3,h4,form,input,p,pre{margin:0;padding:0;border:0}body{background-color:#FFF}img{border:0}a{text-decoration:none;cursor:pointer}li{list-style:none}h1,h2,h3,h4,p{color:#333;font-family:Arial,Helvetica,sans-serif;font-weight:normal}
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+
+body, h1, h2, h3, h4, p, span, a, button{
+    font-family:'Ubuntu', sans-serif ;
+}
+
+h1{
+    font-weight:700;
+    font-size:60px;
+    letter-spacing:-2px;
+    color:#FFFFFF;
+    line-height:1.0;
+}
+
+h3{
+    font-size: 22px;
+    font-weight:300;
+    letter-spacing:-1px;
+    color:#FCEAE3;
+    line-height:1.3;
+}
+
+.introTxtMainContainer{
+    background: #FF5100  url('http://landing.fromdoppler.com/Doppler/roicalculator/img/guardBg.png') repeat-x;
+    width: 100%;
+}
+
+.introTxtContainer{
+    height: 345px;
+    width: 940px;
+    margin:0 auto;
+}
+
+.introTitle{
+    padding-top:63px;
+}
+
+.introSubtitle{
+    padding-top:20px;
+}
+
+.roiAnalizerMainContainer{
+    width:100%;
+}
+
+.roiAnalizerContainer{
+    width: 940px;
+    margin: 0 auto;
+}
+
+h2{
+    font-size:31px;
+    font-weight:700;
+    color:#2B2200;
+    letter-spacing:-1px;
+}
+
+.roiTitle{
+    padding-top:84px;
+}
+
+input::-webkit-input-placeholder {
+    font-size:15px;
+    letter-spacing:-1px;
+    font-style:italic;
+    color:#79725E;
+    line-height:48px;
+    font-weight:300;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    font-size:15px;
+    letter-spacing:-1px;
+    font-style:italic;
+    color:#79725E;
+    line-height:48px; 
+    font-weight:300;
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+    font-size:15px;
+    letter-spacing:-1px;
+    font-style:italic;
+    color:#79725E;
+    line-height:48px; 
+    font-weight:300; 
+}
+input:-ms-input-placeholder {  
+    font-size:15px;
+    letter-spacing:-1px;
+    font-style:italic;
+    color:#79725E;
+    line-height:48px; 
+    font-weight:300;
+}
+
+.rowContainer{
+    background-color:#ECEBE9;
+    height:87px;
+    width:100%;
+    margin-bottom:4px;
+}
+
+.roiForm{
+    margin-top:39px;
+}
+
+.firstColumnOfRowContainer{
+    float:left;
+    width:630px;
+    height:100%;
+}
+
+.roiFormTitle{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:-1px;
+    color:#2B2300;
+    padding-top:22px;
+    padding-left:26px;
+}
+
+.roiFormSubtitle{
+    font-size:13px;
+    line-height:1.3;
+    font-weight:300;
+    font-style:italic;
+    color:#79725E;
+    padding-top:3px;
+    padding-left:26px;
+}
+
+.secondColumnOfRowContainer{
+    background-color:#FFFFFF;
+    border-color:#D5D4CE;
+    border-width:1px;
+    border-style:solid;
+    float:left;
+    width:308px;
+    height:99%;
+}
+
+.formInput{
+    float:left;
+    font-weight:700;
+    color:#2B2300;
+    font-size:41px;
+    letter-spacing:-1px;
+    width:258px;
+    height:85px;
+    vertical-align:middle;
+    text-align:right;
+}
+
+.rowUnit{
+    float:left;
+    font-weight:300;
+    font-size:24px;
+    color:#2B2300;
+    letter-spacing:-1px;
+    padding-top:27px;
+    padding-left:23px;
+}
+
+button{
+    margin-top:25px;
+    margin-bottom:66px;
+    margin-left:630px;
+    height:80px;
+    width:310px;
+    vertical-align:middle;
+    text-align:center;
+    font-size: 24px;
+    color:#FFFFFF;
+    font-weight:300;
+    letter-spacing:-2px;
+    background-color:#112E51 ;
+    border-radius:60px;
+    border:0;
+}
+
+button:hover{
+    background-color: #112E51 ;
+    cursor:pointer;
+}
+
+.roiResultsTitle{
+    padding-left:10px;
+    padding-top:-4px;
+}
+
+.roiResultsMainContainer{
+    background-color:#F4F3F2;
+    width:100%;
+    height:880px;
+    /* display:none; */
+}
+.roiResultsTriangleWrapper{
+    width:100%;
+    background-color:#FFFFFF;
+    height:20px;
+}
+
+.roiResultsTriangleContainer{
+    width:960px;
+    margin:0 auto;
+    height:20px;
+}
+
+.triangleImg{
+    margin:0;
+    border:0;
+    float:right;
+    margin-right:144px;
+}
+
+.roiResultsContainer{
+    width:960px;
+    margin:0 auto;
+    margin-top:70px;
+}
+
+.roiResultsContainer h2{
+    padding-bottom:42px;
+    padding-top: 14px;
+}
+
+.roiResultsFirstColumn{/* CSS Reset */
+    *:focus {
+      outline: 0
+    }
+    
+    input:focus,
+    input:active {
+      border: 0;
+      outline: 0
+    }
+    
+    body,
+    div,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    form,
+    input,
+    p,
+    pre {
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+    
+    body {
+      background-color: #FFF
+    }
+    
+    img {
+      border: 0
+    }
+    
+    a {
+      text-decoration: none;
+      cursor: pointer
+    }
+    
+    li {
+      list-style: none
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal
+    }
+    
+    @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+    
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span,
+    a,
+    button {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    
+    h1 {
+      font-weight: 700;
+      font-size: 60px;
+      letter-spacing: -2px;
+      color: #FFFFFF;
+      line-height: 1.0;
+    }
+    
+    h3 {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: -1px;
+      color: #FCEAE3;
+      line-height: 1.3;
+    }
+    
+    .introTxtMainContainer {
+      background: #EB916B url('http://landing.fromdoppler.com/Doppler/roicalculator/img/guardBg.png') repeat-x;
+      width: 100%;
+    }
+    
+    .introTxtContainer {
+      height: 345px;
+      width: 940px;
+      margin: 0 auto;
+    }
+    
+    .introTitle {
+      padding-top: 63px;
+    }
+    
+    .introSubtitle {
+      padding-top: 20px;
+    }
+    
+    .roiAnalizerMainContainer {
+      width: 100%;
+    }
+    
+    .roiAnalizerContainer {
+      width: 940px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      font-size: 31px;
+      font-weight: 700;
+      color: #2B2200;
+      letter-spacing: -1px;
+    }
+    
+    .roiTitle {
+      padding-top: 84px;
+    }
+    
+    input::-webkit-input-placeholder {
+      font-size: 15px;
+      letter-spacing: -1px;
+      font-style: italic;
+      color: #79725E;
+      line-height: 48px;
+      font-weight: 300;
+    }
+    
+    input:-moz-placeholder {
+      /* Firefox 18- */
+      font-size: 15px;
+      letter-spacing: -1px;
+      font-style: italic;
+      color: #79725E;
+      line-height: 48px;
+      font-weight: 300;
+    }
+    
+    input::-moz-placeholder {
+      /* Firefox 19+ */
+      font-size: 15px;
+      letter-spacing: -1px;
+      font-style: italic;
+      color: #79725E;
+      line-height: 48px;
+      font-weight: 300;
+    }
+    
+    input:-ms-input-placeholder {
+      font-size: 15px;
+      letter-spacing: -1px;
+      font-style: italic;
+      color: #79725E;
+      line-height: 48px;
+      font-weight: 300;
+    }
+    
+    .rowContainer {
+      background-color: #ECEBE9;
+      height: 87px;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+    
+    .roiForm {
+      margin-top: 39px;
+    }
+    
+    .firstColumnOfRowContainer {
+      float: left;
+      width: 630px;
+      height: 100%;
+    }
+    
+    .roiFormTitle {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #2B2300;
+      padding-top: 22px;
+      padding-left: 26px;
+    }
+    
+    .roiFormSubtitle {
+      font-size: 13px;
+      line-height: 1.3;
+      font-weight: 300;
+      font-style: italic;
+      color: #79725E;
+      padding-top: 3px;
+      padding-left: 26px;
+    }
+    
+    .secondColumnOfRowContainer {
+      background-color: #FFFFFF;
+      border-color: #D5D4CE;
+      border-width: 1px;
+      border-style: solid;
+      float: left;
+      width: 308px;
+      height: 99%;
+    }
+    
+    .formInput {
+      float: left;
+      font-weight: 700;
+      color: #2B2300;
+      font-size: 41px;
+      letter-spacing: -1px;
+      width: 258px;
+      height: 85px;
+      vertical-align: middle;
+      text-align: right;
+    }
+    
+    .rowUnit {
+      float: left;
+      font-weight: 300;
+      font-size: 24px;
+      color: #2B2300;
+      letter-spacing: -1px;
+      padding-top: 27px;
+      padding-left: 23px;
+    }
+    
+    button {
+      margin-top: 25px;
+      margin-bottom: 66px;
+      margin-left: 630px;
+      height: 80px;
+      width: 310px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 24px;
+      color: #FFFFFF;
+      font-weight: 300;
+      letter-spacing: -2px;
+      background-color: #00B966;
+      border-radius: 60px;
+      border: 0;
+    }
+    
+    button:hover {
+      background-color: #02B061;
+      cursor: pointer;
+    }
+    
+    .roiResultsTitle {
+      padding-left: 10px;
+      padding-top: -4px;
+    }
+    
+    .roiResultsMainContainer {
+      background-color: #F4F3F2;
+      width: 100%;
+      height: 880px;
+      display: none;
+    }
+    
+    .roiResultsTriangleWrapper {
+      width: 100%;
+      background-color: #FFFFFF;
+      height: 20px;
+    }
+    
+    .roiResultsTriangleContainer {
+      width: 960px;
+      margin: 0 auto;
+      height: 20px;
+    }
+    
+    .triangleImg {
+      margin: 0;
+      border: 0;
+      float: right;
+      margin-right: 144px;
+    }
+    
+    .roiResultsContainer {
+      width: 960px;
+      margin: 0 auto;
+      margin-top: 70px;
+    }
+    
+    .roiResultsContainer h2 {
+      padding-bottom: 42px;
+      padding-top: 14px;
+    }
+    
+    .roiResultsFirstColumn {
+      float: left;
+      width: 470px;
+    
+    }
+    
+    .roiResultsChart {
+      width: 460px;
+      height: 632px;
+      margin-top: 5px;
+    }
+    
+    .roiResultsSecondColumn {
+      float: left;
+      width: 410px;
+      margin-left: 62px;
+      margin-top: 2px;
+    }
+    
+    .roiResultsAnalyticContainer {
+      width: 100%;
+      height: 636px;
+    }
+    
+    .analyticRowContainer {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 12px;
+    }
+    
+    .analyticRowContainer p:nth-child(2) {
+      float: left;
+    }
+    
+    .analyticRowContainer p {
+      padding: 0;
+      width: auto;
+    }
+    
+    .roiAnalyticValue {
+      color: #2B2300;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 1.4;
+      float: right;
+      padding-top: 6px;
+      padding-right: 6px;
+    }
+    
+    hr {
+      width: 100%;
+      height: 1px;
+      color: #DAD8D3;
+      background-color: #DAD8D3;
+      border: 0;
+      margin-top: 32px;
+      margin-bottom: 23px;
+    }
+    
+    .roiAnalyticFinalValue {
+      color: #00B866;
+      line-height: 1.0;
+      font-size: 41px;
+      margin-top: -23px;
+      padding-left: 30px;
+      letter-spacing: -1px;
+    }
+    
+    .roiPercentSign {
+      font-weight: 300;
+      color: #00B866;
+      font-size: 24px;
+      margin-top: -12px;
+      float: right;
+    }
+    
+    .preFooterMainContainer {
+      width: 940px;
+      height: 230px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+    }
+    
+    .preFooterContainer {}
+    
+    .preFooterTitle {
+      padding-top: 80px;
+      padding-bottom: 10px;
+    }
+    
+    .preFooterSubtitle {
+      font-size: 15px;
+      line-height: 1.3;
+      font-weight: 300;
+      color: #79725E;
+      padding-top: 5px;
+    }
+    
+    .preFooterSubtitle a {
+      color: #00B866;
+    }
+    
+    h4 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #2B2300;
+      line-height: 1.3;
+    }
+    
+    float:left;
+    width:470px;
+    
+}
+
+.roiResultsChart{
+    width:460px;
+    height:632px;
+    margin-top:5px;
+}
+
+.roiResultsSecondColumn{
+    float:left;
+    width:410px;
+    margin-left:62px;
+    margin-top:2px;
+}
+
+.roiResultsAnalyticContainer{
+    width:100%;
+    height:636px;
+}
+
+.analyticRowContainer{
+    width:100%;
+    height:60px;
+    margin-bottom:12px;
+}
+
+.analyticRowContainer p:nth-child(2){
+    float:left;
+}
+
+.analyticRowContainer p{
+    padding:0;
+    width:auto;
+}
+.roiAnalyticValue{
+    color:#2B2300;
+    font-weight:bold;
+    font-size:24px;
+    line-height:1.4;
+    float:right;
+    padding-top:6px;
+    padding-right:6px;
+}
+
+hr{
+    width:100%;
+    height:1px;
+    color:#DAD8D3;
+    background-color:#DAD8D3;
+    border:0;
+    margin-top:32px;
+    margin-bottom:23px;
+}
+
+.roiAnalyticFinalValue{
+    color:#00B866;
+    line-height:1.0;
+    font-size:41px;
+    margin-top:-23px;
+    padding-left:30px;
+    letter-spacing:-1px;
+}
+
+.roiPercentSign{
+    font-weight:300;
+    color:#00B866;
+    font-size:24px;
+    margin-top:-12px;
+    float:right;
+}
+
+.preFooterMainContainer{
+    width:940px;
+    height:230px;
+    margin:0 auto;
+    background-color:#FFFFFF;
+}
+
+.preFooterContainer{
+    
+}
+
+.preFooterTitle{
+    padding-top:80px;
+    padding-bottom:10px;
+}
+
+.preFooterSubtitle{
+    font-size:15px;
+    line-height:1.3;
+    font-weight:300;
+    color:#79725E;
+    padding-top:5px;
+}
+
+.preFooterSubtitle a{
+    color:#00B866;
+}
+
+h4{
+    font-size: 24px;
+    font-weight:700;
+    letter-spacing:-1px;
+    color:#2B2300;
+    line-height:1.3;
+}
