@@ -60,7 +60,7 @@
                     <!-- <p class="roiFormSubtitle">Percentage of Subscribers that opened your Email.</p> -->
                 </div>
                 <div class="secondColumnOfRowContainer">
-                    <input id="customerValue" name="customerValue" class="formInput" type="text" placeholder="Enter Annual Value of Customer" maxlength="5" />
+                    <input id="customerValue" value="315" name="customerValue" class="formInput" type="text" placeholder="Enter Annual Value of Customer" maxlength="5" />
                     <p class="rowUnit">$</p>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <!-- <p class="roiFormSubtitle">Percentage of Subscribers who converted (buy, register, download, etc).</p> -->
                 </div>
                 <div class="secondColumnOfRowContainer">
-                    <input id="customerRetention" name="customerRetention" class="formInput"   type="text" placeholder="Enter Customer Retention" maxlength="5" />
+                    <input id="customerRetention" value="8" name="customerRetention" class="formInput"   type="text" placeholder="Enter Customer Retention" maxlength="5" />
                     <p class="rowUnit">:)</p>
                 </div>
             </div>
@@ -86,13 +86,23 @@
         <h2 class="roiTitle">Add ClickSWITCH</h2>
         <form id="roiForm" class="roiForm"  action="">
             
-                    <div class="rowContainer">
+                    <!-- <div class="rowContainer">
                         <div class="firstColumnOfRowContainer">
-                            <p class="roiFormTitle">New Direct Deposit Adoption</p>
+                            <p class="roiFormTitle">New Direct Deposit Adoption</p> -->
                             <!-- <p class="roiFormSubtitle">The total number of contacts you’ve sent your Campaign to.</p> -->
-                        </div>
+                        <!-- </div>
                         <div class="secondColumnOfRowContainer">
                             <p class="roiAnalyticValue" id="newDepositAdoption">0</p>
+                        </div>
+                    </div> -->
+                    <div class="rowContainer">
+                        <div class="firstColumnOfRowContainer">
+                            <p class="roiFormTitle">New Direct Deposit Adoption <i> (Average increase of 20% - 40%)</i></p>
+                            <!-- <p class="roiFormSubtitle">Percentage of Subscribers who converted (buy, register, download, etc).</p> -->
+                        </div>
+                        <div class="secondColumnOfRowContainer">
+                            <input id="newDepositAdoption" name="newDepositAdoption" class="formInput"   type="text" placeholder="Enter New Direct Deposit Adoption" maxlength="5" />
+                            <p class="rowUnit">%</p>
                         </div>
                     </div>
 
@@ -113,6 +123,7 @@
 </section>
 <!-- Add ClickSWITCH -->
 <!-- Results -->
+<div id="content">
 <section class="roiAnalizerMainContainer">
     <div class="roiAnalizerContainer">
         <h2 class="roiTitle">Results</h2>
@@ -178,9 +189,11 @@
                 </div>
             </div>
         </form>
+        <div id="editor"></div>
+        <button id="cmd" class="roibutton">Save PDF</button>
     </div>
 </section>
-
+</div>
 <section class="preFooterMainContainer">
     <div class="preFooterContainer">
         <h4 class="preFooterTitle">Need more information about how to calculate your ROI with ClickSWITCH?</h4>
