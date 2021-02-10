@@ -71,6 +71,7 @@ $('.roiAnalizerContainer').on('click','#ctaCalculate',function(){
      doc.fromHTML($('#content').html(), 15, 15, {
          'width': 170,
              'elementHandlers': specialElementHandlers
+             
      });
      doc.save('ClickSWITCHROI.pdf');
  });
