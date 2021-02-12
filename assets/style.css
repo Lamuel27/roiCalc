@@ -27,6 +27,12 @@ h3{
     width: 100%;
 }
 
+@media screen and (max-width: 800px) { 
+  .introTxtMainContainer {
+    width: 300%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
 .introTxtContainer{
     height: 210px;
     width: 940px;
